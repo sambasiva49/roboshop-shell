@@ -1,8 +1,10 @@
 yum install maven -y
 useradd roboshop
-mkidir /app
-cd /app
+rm -rf /app
+mkdir /app
+#cd /app
 curl -L -o /tmp/shipping.zip https://roboshop-artifacts.s3.amazonaws.com/shipping.zip
+cd /app
 unzip /tmp/shipping.zip
 
 mvn clean package
