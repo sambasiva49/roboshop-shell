@@ -10,7 +10,7 @@ useradd roboshop
 echo -e "\e[36m>>>>>>>> create application directory <<<<<<<\e[0m"
 rm -rf /app
 mikdir /app
-cd /app
+#cd /app
 echo -e "\e[36m>>>>>>>> download app content <<<<<<<\e[0m"
 
 curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue.zip
@@ -21,7 +21,7 @@ echo -e "\e[36m>>>>>>>>copy catalogue systemd file <<<<<<<\e[0m"
 
 cp catalogue.service /etc/system.d/system/catalogue.service
 echo -e "\e[36m>>>>>>>> install nodejs <<<<<<<\e[0m"
-
+cd /app
 npm install
 echo -e "\e[36m>>>>>>>>start catalogue service<<<<<<<\e[0m"
 
