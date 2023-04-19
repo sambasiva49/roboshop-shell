@@ -10,6 +10,7 @@ cd /app
 
 unzip /tmp/cart.zip
 
+# shellcheck disable=SC2164
 cd /app
 
 npm install
