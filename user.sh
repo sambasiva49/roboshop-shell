@@ -5,7 +5,7 @@ mkdir /app
 cd /app
 curl -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip
 unzip /tmp/user.zip
-cp user.service /etc/system.d/system/user.service
+cp user.service /etc/systemd/system/user.service
 
 npm install
 system daemon-reload
