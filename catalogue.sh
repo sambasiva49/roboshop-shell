@@ -24,7 +24,7 @@ cd /app
 npm install
 echo -e "\e[36m>>>>>>>>copy catalogue systemd file <<<<<<<\e[0m"
 
-cp catalogue.service /etc/systemd/system/catalogue.service
+cp /home/centos/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service
 echo -e "\e[36m>>>>>>>>start catalogue service<<<<<<<\e[0m"
 
 system daemon-reload
