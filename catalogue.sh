@@ -20,7 +20,7 @@ echo -e "\e[36m>>>>>>>>unzip app content <<<<<<<\e[0m"
 unzip /tmp/catalogue.zip
 echo -e "\e[36m>>>>>>>>copy catalogue systemd file <<<<<<<\e[0m"
 
-cp catalogue.service /etc/system.d/system/catalogue.service
+cp catalogue.service /etc/systemd/system/catalogue.service
 echo -e "\e[36m>>>>>>>> install nodejs <<<<<<<\e[0m"
 cd /app
 npm install
