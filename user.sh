@@ -1,7 +1,7 @@
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
 useradd roboshop
-mikdir /app
+mkdir /app
 cd /app
 curl -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip
 unzip /tmp/user.zip
