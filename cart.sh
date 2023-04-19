@@ -7,6 +7,7 @@ mkdir /app
 #cd /app
 curl -o /tmp/cart.zip https://roboshop-artifacts.s3.amazonaws.com/cart.zip
 cd /app
+
 unzip /tmp/cart.zip
 
 cd /app
