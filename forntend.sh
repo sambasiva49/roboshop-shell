@@ -6,7 +6,7 @@ curl -o /tmp/frontend.zip https://roboshop-artifacts.s3.amazonaws.com/frontend.z
 #shellcheck disable=SC2164
 cd /usr/share/nginx/html
 unzip /tmp/frontend.zip
-cp roboshop.conf /etc/nginx/default.d/roboshop.conf
+cp /home/centos/roboshop-shell/roboshop.conf /etc/nginx/default.d/roboshop.conf
 
 systemctl restart nginx
 
