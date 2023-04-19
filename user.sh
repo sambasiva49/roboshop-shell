@@ -1,11 +1,13 @@
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
 useradd roboshop
+rm -rf /app
 mkdir /app
-cd /app
+#cd /app
 curl -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip
+cd /app
 unzip /tmp/user.zip
-cp user.service /etc/systemd/system/user.service
+cp /home/centos/roboshop-shell/user.service /etc/systemd/system/user.service
 
 npm install
 system daemon-reload
