@@ -18,12 +18,13 @@ curl -o /tmp/catalogue.zip https://roboshop-artifacts.s3.amazonaws.com/catalogue
 echo -e "\e[36m>>>>>>>>unzip app content <<<<<<<\e[0m"
 
 unzip /tmp/catalogue.zip
-echo -e "\e[36m>>>>>>>>copy catalogue systemd file <<<<<<<\e[0m"
 
-cp catalogue.service /etc/systemd/system/catalogue.service
 echo -e "\e[36m>>>>>>>> install nodejs <<<<<<<\e[0m"
 cd /app
 npm install
+echo -e "\e[36m>>>>>>>>copy catalogue systemd file <<<<<<<\e[0m"
+
+cp catalogue.service /etc/systemd/system/catalogue.service
 echo -e "\e[36m>>>>>>>>start catalogue service<<<<<<<\e[0m"
 
 system daemon-reload
