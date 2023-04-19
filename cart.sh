@@ -10,6 +10,6 @@ unzip /tmp/cart.zip
 cp /home/centos/roboshop-shell/cart.service /etc/systemd/system/cart.service
 
 npm install
-system daemon-reload
+systemctl daemon-reload
 systemctl enable cart
 systemctl satrt cart
