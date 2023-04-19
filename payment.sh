@@ -5,7 +5,7 @@ cd /app
 curl -L -o /tmp/payment.zip https://roboshop-artifacts.s3.amazonaws.com/payment.zip
 unzip /temp/payment.zip
 pip3.6 install -r requirements.txt
-cp payment.service /etc/systemd/system/payment.service
+cp /home/centos/roboshop-shell/payment.service /etc/systemd/system/payment.service
 
 systemctl daemon-reload
 systemctl enable payment
