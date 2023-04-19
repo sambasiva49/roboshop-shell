@@ -12,4 +12,4 @@ cp /home/centos/roboshop-shell/cart.service /etc/systemd/system/cart.service
 npm install
 system daemon-reload
 systemctl enable cart
-systemctl resatrt cart
+systemctl satrt cart
