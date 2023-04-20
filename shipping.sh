@@ -1,5 +1,6 @@
+source common.sh
 yum install maven -y
-useradd roboshop
+useradd ${app_user}
 rm -rf /app
 mkdir /app
 #cd /app

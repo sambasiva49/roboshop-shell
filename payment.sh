@@ -1,5 +1,6 @@
+source common.sh
 yum install python36 gcc python3-devel -y
-useradd roboshop
+useradd ${app_user}
 rm -rf /app
 mkdir /app
 cd /app
