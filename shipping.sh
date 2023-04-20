@@ -1,5 +1,5 @@
 source common.sh
-pwd
+#pwd
 exit
 
 yum install maven -y
