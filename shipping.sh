@@ -1,4 +1,6 @@
-source common.sh
+script_path=$(dirname $0)
+source ${script_path}/common.sh
+
 yum install maven -y
 useradd ${app_user}
 rm -rf /app
@@ -11,7 +13,7 @@ unzip /tmp/shipping.zip
 mvn clean package
 mv target/shipping-1.0.jar shipping.jar
 
-cp /home/centos/roboshop-shell/shipping.service /etc/systemd/system/shipping.service
+cp ${script_path}/shipping.service /etc/systemd/system/shipping.service
 systemctl daemon-reload
 systemctl enable shipping
 systemctl start shipping

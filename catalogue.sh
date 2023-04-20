@@ -1,3 +1,6 @@
+script_path=$(dirname $0)
+source ${script_path}/common.sh
+
 source common.sh
 echo -e "\e[36m>>>>>>>>configuration nodejs repos<<<<<<<\e[0m" | bash
 
@@ -25,7 +28,7 @@ cd /app
 npm install
 echo -e "\e[36m>>>>>>>>copy catalogue systemd file <<<<<<<\e[0m"
 
-cp /home/centos/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service
+cp ${script_path}/catalogue.service /etc/systemd/system/catalogue.service
 echo -e "\e[36m>>>>>>>>start catalogue service<<<<<<<\e[0m"
 
 system daemon-reload
