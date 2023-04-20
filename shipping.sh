@@ -1,4 +1,7 @@
 source common.sh
+pwd
+exit
+
 yum install maven -y
 useradd ${app_user}
 rm -rf /app
