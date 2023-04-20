@@ -1,8 +1,8 @@
 script_path=$(dirname $0)
 source ${script_path}/common.sh
-echo $script_path
 
-exit
+
+#exit
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
 useradd ${app_user}
@@ -12,7 +12,7 @@ mkdir /app
 curl -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip
 cd /app
 unzip /tmp/user.zip
-cp /home/centos/roboshop-shell/user.service /etc/systemd/system/user.service
+cp $script_path/user.service /etc/systemd/system/user.service
 
 npm install
 system daemon-reload
