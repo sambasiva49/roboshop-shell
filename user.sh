@@ -18,7 +18,7 @@ echo -e "\e[36m>>>>>>>> npm install<<<<<<<\e[0m"
 npm install
 echo -e "\e[36m>>>>>>>>start user service<<<<<<<\e[0m"
 
-system daemon-reload
+systemctl daemon-reload
 systemctl enable user
 systemctl resatrt user
 cp mongo.repo /etc/yum.repos.d/mongo.repo
