@@ -21,6 +21,12 @@ echo -e "\e[36m>>>>>>>>start user service<<<<<<<\e[0m"
 systemctl daemon-reload
 systemctl enable user
 systemctl resatrt user
+echo -e "\e[36m>>>>>>>> mongo repo file copy<<<<<<<\e[0m"
+
 cp mongo.repo /etc/yum.repos.d/mongo.repo
+echo -e "\e[36m>>>>>>>>install mongo <<<<<<<\e[0m"
+
 yum install mongodb-org-shell -y
+echo -e "\e[36m>>>>>>>> connect dns server<<<<<<<\e[0m"
+
 mongo --host mongodb.sambadevops.online </app/schema/user.js
