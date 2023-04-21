@@ -20,7 +20,7 @@ echo -e "\e[36m>>>>>>>>start user service<<<<<<<\e[0m"
 
 systemctl daemon-reload
 systemctl enable user
-systemctl resatrt user
+systemctl satrt user
 echo -e "\e[36m>>>>>>>> mongo repo file copy<<<<<<<\e[0m"
 
 cp mongo.repo /etc/yum.repos.d/mongo.repo
