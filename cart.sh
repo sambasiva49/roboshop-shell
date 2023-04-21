@@ -30,9 +30,9 @@ echo -e "\e[36m>>>>>>>> install nodejs <<<<<<<\e[0m"
 npm install
 echo -e "\e[36m>>>>>>>>copy catalogue systemd file <<<<<<<\e[0m"
 
-cp ${script_path}/cart.service /etc/systemd/system/cart.service
+cp $script_path/cart.service /etc/systemd/system/cart.service
 echo -e "\e[36m>>>>>>>>start catalogue service<<<<<<<\e[0m"
 
 systemctl daemon-reload
 systemctl enable cart
-systemctl Start cart
+systemctl start cart
