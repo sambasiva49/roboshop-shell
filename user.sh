@@ -11,10 +11,13 @@ mkdir /app
 curl -o /tmp/user.zip https://roboshop-artifacts.s3.amazonaws.com/user.zip
 cd /app
 unzip /tmp/user.zip
-echo -e "\e[36m>>>>>>>>copy catalogue systemd file <<<<<<<\e[0m"
+echo -e "\e[36m>>>>>>>>copy user systemd file <<<<<<<\e[0m"
 cp $script_path/user.service /etc/systemd/system/user.service
+echo -e "\e[36m>>>>>>>> npm install<<<<<<<\e[0m"
 
 npm install
+echo -e "\e[36m>>>>>>>>start user service<<<<<<<\e[0m"
+
 system daemon-reload
 systemctl enable user
 systemctl resatrt user
