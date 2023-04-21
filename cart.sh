@@ -1,7 +1,4 @@
 
-#samba=${realpath "$0"}
-#echo $samba
-#exit
 script=${realpath "$0"}
 script_path=$(dirname "$script")
 source "${script_path}"/common.sh
@@ -9,7 +6,7 @@ source "${script_path}"/common.sh
 
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
-useradd roboshop
+useradd ${app_user}
 rm -rf /app
 mkdir /app
 #cd /app
