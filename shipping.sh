@@ -17,6 +17,8 @@ echo -e "\e[36m>>>>>>>>copy user systemd file <<<<<<<\e[0m"
 
 
 cp ${script_path}/shipping.service /etc/systemd/system/shipping.service
+echo -e "\e[36m>>>>>>>> start the services<<<<<<<\e[0m"
+
 systemctl daemon-reload
 systemctl enable shipping
 systemctl start shipping
