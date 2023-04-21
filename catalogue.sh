@@ -32,7 +32,7 @@ echo -e "\e[36m>>>>>>>>copy catalogue systemd file <<<<<<<\e[0m"
 cp ${script_path}/catalogue.service /etc/systemd/system/catalogue.service
 echo -e "\e[36m>>>>>>>>start catalogue service<<<<<<<\e[0m"
 
-system daemon-reload
+systemctl daemon-reload
 systemctl enable catalogue
 systemctl resatrt catalogue
 
