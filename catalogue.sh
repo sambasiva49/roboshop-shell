@@ -1,6 +1,6 @@
 script_path=$(dirname $0)
 source ${script_path}/common.sh
-
+exit
 source common.sh
 echo -e "\e[36m>>>>>>>>configuration nodejs repos<<<<<<<\e[0m" | bash
 
