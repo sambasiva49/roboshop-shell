@@ -1,6 +1,6 @@
 
 samba=${realpath "$0"}
-echo samba
+echo $samba
 exit
 script=${realpath "$0"}
 script_path=$(dirname "$script")
