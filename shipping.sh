@@ -22,6 +22,12 @@ echo -e "\e[36m>>>>>>>> start the services<<<<<<<\e[0m"
 systemctl daemon-reload
 systemctl enable shipping
 systemctl start shipping
+echo -e "\e[36m>>>>>>>> install mysql<<<<<<<\e[0m"
+
 yum install mysql -y
+echo -e "\e[36m>>>>>>>> password to mysql<<<<<<<\e[0m"
+
 mysql -h mysql.sambadevops.online -uroot -pRoboShop@1 < /app/schema/shipping.sql
+echo -e "\e[36m>>>>>>>> restart shipping<<<<<<<\e[0m"
+
 systemctl restart shipping
