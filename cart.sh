@@ -1,5 +1,5 @@
 
-samba=realpath "$0"
+samba=${realpath "$0"}
 echo samba
 exit
 script=${realpath "$0"}
