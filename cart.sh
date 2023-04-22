@@ -2,8 +2,10 @@
 script=${realpath "$0"}
 script_path=$(dirname "$script")
 source "${script_path}"/common.sh
+component = cart
+function_nodejs
 
-echo -e "\e[36m>>>>>>>>configuration nodejs repos<<<<<<<\e[0m"
+:'echo -e "\e[36m>>>>>>>>configuration nodejs repos<<<<<<<\e[0m"
 
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 echo -e "\e[36m>>>>>>>>install nodejs  <<<<<<<\e[0m"
