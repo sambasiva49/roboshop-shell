@@ -13,7 +13,7 @@ function_nodejs(){
 
 
   useradd ${app_user}
-  echo -e "\e[36m>>>>>>>> create application directory <<<<<<<\e[0m"
+  echo -e "\e create application directory <<<<<<<\e[0m"
   rm -rf /app
   mkdir /app
 
